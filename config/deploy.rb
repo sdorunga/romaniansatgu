@@ -1,13 +1,13 @@
 set :application, "romaniansatgu"
 set :domain,      "romaniansatgu.ro"
-set :repository,  "ssh://git@github.com:sdorunga1/romaniansatgu.git"
+set :repository,  "git://github.com/sdorunga1/romaniansatgu.git"
 set :use_sudo,    false
 set :deploy_to,   "/home/ubuntu/webapps/romaniansatgu"
 set :scm,         "git"
 set :branch, 	  "master"
 set :ssh_options, {:forward_agent => true}
-ssh_options[:keys] = ["D:/first.pem"]
-ssh_options[:auth_methods] = "publickey"
+set :user, "ubuntu"
+ssh_options[:keys] = ["C:/Users/Stefan/Keys/first.pem"] 
 
 role :app, "romaniansatgu.ro"
 role :web, "romaniansatgu.ro"
