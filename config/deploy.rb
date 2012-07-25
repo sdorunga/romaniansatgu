@@ -5,6 +5,7 @@ set :use_sudo,    false
 set :deploy_to,   "/home/ubuntu/webapps/romaniansatgu"
 set :scm,         "git"
 set :branch, 	  "master"
+set :ssh_options, {:forward_agent => true}
 
 role :app, "romaniansatgu.ro"
 role :web, "romaniansatgu.ro"
