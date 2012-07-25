@@ -7,6 +7,7 @@ set :scm,         "git"
 set :branch, 	  "master"
 set :ssh_options, {:forward_agent => true}
 ssh_options[:keys] = ["D:/first.pem"]
+ssh_options[:auth_methods] = "publickey"
 
 role :app, "romaniansatgu.ro"
 role :web, "romaniansatgu.ro"
