@@ -9,6 +9,8 @@ set :ssh_options, {:forward_agent => true}
 set :user, "ubuntu"
 ssh_options[:keys] = ["C:/Users/Stefan/Keys/first.pem"] 
 
+load 'deploy/assets' #runs asssests precompile after deployment
+
 role :app, "romaniansatgu.ro"
 role :web, "romaniansatgu.ro"
 role :db,  "romaniansatgu.ro", :primary => true
